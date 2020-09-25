@@ -1,9 +1,9 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const token = process.argv.length == 2 ? process.env.token : "";
-const welcomeChannelName = "안녕하세요";
-const byeChannelName = "안녕히가세요";
-const welcomeChannelComment = "어서오세요.";
+const welcomeChannelName = "일반";
+const byeChannelName = "일반";
+const welcomeChannelComment = "안녕하세요. 어몽 하는 방 디스코드입니다. 게임 전 공지 읽어주시고 즐겜해주세요.";
 const byeChannelComment = "안녕히가세요.";
 
 client.on('ready', () => {
@@ -32,8 +32,8 @@ client.on("guildMemberRemove", (member) => {
 client.on('message', (message) => {
   if(message.author.bot) return;
 
-  if(message.content == 'ping') {
-    return message.reply('pong');
+  if(message.content == '어몽봇 규칙') {
+    return message.reply('게임 진행 중 되도록이면 모두에게 존칭과 존댓말을 사용합니다. 반모여도 서로 사용해 주세요.');
   }
 
   if(message.content == 'embed') {
