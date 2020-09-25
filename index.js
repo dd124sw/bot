@@ -8,7 +8,7 @@ const byeChannelComment = "안녕히가세요.";
 
 client.on('ready', () => {
   console.log('켰다.');
-  client.user.setPresence({ game: { name: '아직 개발중' }, status: 'online' })
+  client.user.setPresence({ game: { name: '어몽봇 헬프' }, status: 'online' })
 });
 
 client.on("guildMemberAdd", (member) => {
@@ -57,17 +57,17 @@ client.on('message', (message) => {
   } else if(message.content == 'help') {
     let helpImg = 'https://images-ext-1.discordapp.net/external/RyofVqSAVAi0H9-1yK6M8NGy2grU5TWZkLadG-rwqk0/https/i.imgur.com/EZRAPxR.png';
     let commandList = [
-      {name: 'ping', desc: '현재 핑 상태'},
-      {name: 'embed', desc: 'embed 예제1'},
-      {name: 'embed2', desc: 'embed 예제2 (help)'},
+      {name: '어몽봇 규칙', desc: '어몽방 규칙 보기'},
+      {name: '어몽봇 embed', desc: 'embed 예제1'},
+      {name: '어몽봇 헬프', desc: '어몽봇 명령어 보기'},
       {name: '어몽봇 전체공지', desc: 'dm으로 전체 공지 보내기'},
       {name: '어몽봇 청소', desc: '텍스트 지움'},
     ];
     let commandStr = '';
     let embed = new Discord.RichEmbed()
-      .setAuthor('Help of 콜라곰 BOT', helpImg)
+      .setAuthor('Help of 어몽봇', helpImg)
       .setColor('#186de6')
-      .setFooter(`콜라곰 BOT ❤️`)
+      .setFooter(`어몽봇`)
       .setTimestamp()
     
     commandList.forEach(x => {
