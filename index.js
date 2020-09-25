@@ -58,8 +58,7 @@ client.on('message', (message) => {
     let helpImg = 'https://images-ext-1.discordapp.net/external/RyofVqSAVAi0H9-1yK6M8NGy2grU5TWZkLadG-rwqk0/https/i.imgur.com/EZRAPxR.png';
     let commandList = [
       {name: '어몽봇 헬프', desc: '어몽봇 명령어 보기'},
-      {name: '어몽봇 규칙', desc: '어몽방 규칙 보기'},
-      {name: '어몽봇 embed', desc: 'embed 예제1'},  
+      {name: '어몽봇 규칙', desc: '어몽방 규칙 보기'}, 
       {name: '어몽봇 전체공지', desc: 'dm으로 전체 공지 보내기'},
       {name: '어몽봇 청소', desc: '텍스트 지움'},
     ];
