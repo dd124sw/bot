@@ -159,13 +159,8 @@ async function AutoMsgDelete(message, str, delay = 3000) {
   }, delay);
 }
 
-@app.command(name="인간적용", pass_context=True)
-async def _HumanRole(ctx, member: discord.Member=None):
-    member = member or ctx.message.author
-    await member.add_roles(get(ctx.guild.roles, name="human"))
-    await ctx.channel.send(str(member)+"에게 역할이 적용되었습니다.")
+role = discord.utils.get(msg.guild.roles, name="멘션가능")
 
-  }
-}
+await msg.author.add_roles(role)
 
 client.login(token);
