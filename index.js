@@ -159,8 +159,11 @@ async function AutoMsgDelete(message, str, delay = 3000) {
   }, delay);
 }
 
-role = discord.utils.get(msg.guild.roles, name="멘션가능")
+if(message.content.startsWith('어몽봇 청소')) {
+  if(checkPermission(message)) return
+   role = discord.utils.get(msg.guild.roles, name="멘션가능")
 
-await msg.author.add_roles(role)
+  await msg.author.add_roles(role)
+}
 
 client.login(token);
